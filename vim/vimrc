@@ -1,0 +1,46 @@
+set nocompatible
+set backspace=indent,eol,start
+
+syn on
+if has("gui_running")
+  colorscheme darkspectrum
+  set guifont=Monospace\ 9
+  set guioptions-=m   " remove menubar
+  set guioptions-=T   " remove toolbar
+
+  set cursorline
+  hi CursorLine guibg=#555555 
+else
+  colorscheme molokai
+  set t_Co=256
+  set mouse=a
+
+  set cursorline
+endif
+
+set tabstop=4 shiftwidth=4 expandtab
+set autoindent nowrap
+
+filetype off
+filetype plugin indent on
+filetype plugin on
+
+au FileType html,xml,xhtml,javascript,vim setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType make,gitconfig setlocal noexpandtab
+
+
+" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree' 
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'groenewege/vim-less'
+
+
+" NERDTree and NERDTreeTabs
+map <F3> :NERDTreeTabsToggle<CR>
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.o$']
+let g:nerdtree_tabs_open_on_gui_startup = 0
+
