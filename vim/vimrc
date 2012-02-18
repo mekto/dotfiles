@@ -39,6 +39,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree' 
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'groenewege/vim-less'
+Bundle 'wincent/Command-T'
 
 
 " NERDTree and NERDTreeTabs
