@@ -18,6 +18,8 @@ else
   set cursorline
 endif
 
+let mapleader = ","
+
 set tabstop=4 shiftwidth=4 expandtab
 set autoindent nowrap
 
