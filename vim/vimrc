@@ -31,12 +31,17 @@ au FileType html,xml,xhtml,javascript,vim setlocal shiftwidth=2 tabstop=2 softta
 au FileType make,gitconfig setlocal noexpandtab
 
 
+" Highlight extra whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+\%#\@<!$/
+
+
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree' 
+Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'groenewege/vim-less'
 Bundle 'wincent/Command-T'
