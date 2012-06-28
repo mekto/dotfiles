@@ -9,7 +9,7 @@ if has("gui_running")
   set guioptions-=T   " remove toolbar
 
   set cursorline
-  hi CursorLine guibg=#555555 
+  hi CursorLine guibg=#555555
 else
   colorscheme molokai
   set t_Co=256
@@ -47,7 +47,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'wincent/Command-T'
 Bundle 'wavded/vim-stylus'
 Bundle 'vim-scripts/Jinja'
-
 
 " NERDTree and NERDTreeTabs
 map <F3> :NERDTreeTabsToggle<CR>
